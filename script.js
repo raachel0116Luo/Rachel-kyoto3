@@ -99,7 +99,150 @@ var sites = [
       "https://upload.wikimedia.org/wikipedia/commons/3/32/Nijo_Castle.jpg",
     link:
       "https://nijo-jocastle.city.kyoto.lg.jp/"
-  }
+  },
+  {
+  name: "Ryoan-ji",
+  coords: [35.0345, 135.7182],
+  emoji: "🏯",
+  description:
+    "Famous Zen rock garden temple and UNESCO site.",
+  image:
+    "https://upload.wikimedia.org/wikipedia/commons/7/76/Ryoanji_Temple_Kyoto.jpg",
+  link:
+    "https://www.ryoanji.jp/"
+},
+
+{
+  name: "Tenryu-ji",
+  coords: [35.0159, 135.6736],
+  emoji: "🏯",
+  description:
+    "Historic Zen temple in Arashiyama.",
+  image:
+    "https://upload.wikimedia.org/wikipedia/commons/3/35/Tenryuji.jpg",
+  link:
+    "https://www.tenryuji.com/"
+},
+
+{
+  name: "To-ji",
+  coords: [34.9809, 135.7478],
+  emoji: " pagoda",
+  description:
+    "Known for Japan’s tallest wooden pagoda.",
+  image:
+    "https://upload.wikimedia.org/wikipedia/commons/0/0b/TojiTemple.jpg",
+  link:
+    "https://toji.or.jp/"
+},
+
+{
+  name: "Saiho-ji",
+  coords: [34.9919, 135.6668],
+  emoji: "🌿",
+  description:
+    "The famous moss temple of Kyoto.",
+  image:
+    "https://upload.wikimedia.org/wikipedia/commons/6/67/Saihoji.jpg",
+  link:
+    "http://www.saihoji-kokedera.com/"
+},
+
+{
+  name: "Ninna-ji",
+  coords: [35.0311, 135.7138],
+  emoji: "🏯",
+  description:
+    "Historic temple famous for late-blooming cherry blossoms.",
+  image:
+    "https://upload.wikimedia.org/wikipedia/commons/4/4f/Ninnaji.jpg",
+  link:
+    "https://ninnaji.jp/"
+},
+
+{
+  name: "Daigo-ji",
+  coords: [34.9518, 135.8191],
+  emoji: "🏯",
+  description:
+    "UNESCO temple complex known for cherry blossoms.",
+  image:
+    "https://upload.wikimedia.org/wikipedia/commons/f/f0/Daigoji.jpg",
+  link:
+    "https://www.daigoji.or.jp/"
+},
+
+{
+  name: "Byodo-in",
+  coords: [34.8890, 135.8074],
+  emoji: "🏯",
+  description:
+    "Famous Phoenix Hall temple in Uji.",
+  image:
+    "https://upload.wikimedia.org/wikipedia/commons/e/e4/Byodoin.jpg",
+  link:
+    "https://www.byodoin.or.jp/en/"
+},
+
+{
+  name: "Ujigami Shrine",
+  coords: [34.8903, 135.8094],
+  emoji: "⛩️",
+  description:
+    "One of Japan’s oldest Shinto shrines.",
+  image:
+    "https://upload.wikimedia.org/wikipedia/commons/9/91/Ujigami_Shrine.jpg",
+  link:
+    "https://www.pref.kyoto.jp/isan/ujigami.html"
+},
+
+{
+  name: "Shimogamo Shrine",
+  coords: [35.0389, 135.7720],
+  emoji: "⛩️",
+  description:
+    "Ancient shrine surrounded by forest.",
+  image:
+    "https://upload.wikimedia.org/wikipedia/commons/a/a0/Shimogamo-jinja.jpg",
+  link:
+    "https://www.shimogamo-jinja.or.jp/"
+},
+
+{
+  name: "Kamigamo Shrine",
+  coords: [35.0606, 135.7528],
+  emoji: "⛩️",
+  description:
+    "One of Kyoto’s oldest Shinto shrines.",
+  image:
+    "https://upload.wikimedia.org/wikipedia/commons/4/42/Kamigamo-jinja.jpg",
+  link:
+    "https://www.kamigamojinja.jp/"
+},
+
+{
+  name: "Kozan-ji",
+  coords: [35.0600, 135.6761],
+  emoji: "🏯",
+  description:
+    "Mountain temple famous for ancient scrolls.",
+  image:
+    "https://upload.wikimedia.org/wikipedia/commons/f/f5/Kozanji.jpg",
+  link:
+    "https://kosanji.com/"
+},
+
+{
+  name: "Nishi Hongan-ji",
+  coords: [34.9914, 135.7512],
+  emoji: "🏯",
+  description:
+    "Major Buddhist temple with massive wooden halls.",
+  image:
+    "https://upload.wikimedia.org/wikipedia/commons/e/e3/Nishi_Honganji.jpg",
+  link:
+    "https://www.hongwanji.kyoto/"
+}
 
 ];
 
