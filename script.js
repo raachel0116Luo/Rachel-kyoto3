@@ -92,7 +92,7 @@ var sites = [
   name: "To-ji",
   coords: [34.9808, 135.7470],
   emoji: "🏯",
-  description: "Temple with Kyoto’s iconic pagoda.",
+
   image: "https://upload.wikimedia.org/wikipedia/commons/0/0d/Toji.jpg",
   link: "https://toji.or.jp/"
 },
