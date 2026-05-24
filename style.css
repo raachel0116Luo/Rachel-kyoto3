@@ -35,3 +35,28 @@ body {
   font-size: 14px;
   line-height: 1.5;
 }
+.popup-card {
+  width: 220px;
+}
+
+.popup-card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.popup-card h2 {
+  margin: 0 0 8px;
+  font-size: 18px;
+}
+
+.popup-card p {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.popup-card a {
+  color: #d14b7e;
+  text-decoration: none;
+  font-weight: bold;
+}

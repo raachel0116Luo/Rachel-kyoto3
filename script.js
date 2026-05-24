@@ -1,12 +1,12 @@
-// =====================================
-// 1. Initialize Map
-// =====================================
+// =========================
+// Create Map
+// =========================
 
 var map = L.map('map').setView([35.0116, 135.7681], 12);
 
-// =====================================
-// 2. Tile Layer
-// =====================================
+// =========================
+// Tile Layer
+// =========================
 
 L.tileLayer(
   'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
@@ -15,187 +15,124 @@ L.tileLayer(
   }
 ).addTo(map);
 
-// =====================================
-// 3. Emoji Icons
-// =====================================
+// =========================
+// Emoji Icon Function
+// =========================
 
 function createEmojiIcon(emoji) {
-    return L.divIcon({
-        html: `<div class="emoji-icon">${emoji}</div>`,
-        className: "",
-        iconSize: [32, 32],
-        iconAnchor: [16, 16],
-        popupAnchor: [0, -16]
-    });
+
+  return L.divIcon({
+
+    html: `<div class="emoji-icon">${emoji}</div>`,
+
+    className: '',
+
+    iconSize: [32, 32],
+
+    iconAnchor: [16, 16]
+
+  });
+
 }
 
-var templeIcon = createEmojiIcon("🏯");
-var shrineIcon = createEmojiIcon("⛩️");
-var castleIcon = createEmojiIcon("🏰");
+// =========================
+// Kyoto UNESCO Sites
+// =========================
 
-// =====================================
-// 4. Kyoto UNESCO Heritage Sites
-// =====================================
+var sites = [
 
-var heritageSites = [
+  {
+    name: "Kiyomizu-dera",
+    coords: [34.9949, 135.7850],
+    emoji: "🏯",
+    description:
+      "One of Kyoto’s most famous temples and a UNESCO World Heritage Site.",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/3/3e/Kiyomizu.jpg",
+    link:
+      "https://www.kiyomizudera.or.jp/en/"
+  },
 
-    {
-        name: "Kiyomizu-dera Temple",
-        coords: [34.9949, 135.7850],
-        icon: templeIcon,
-        type: "Temple",
-        conan: "Featured in Kyoto mystery atmosphere scenes",
-        description: "One of Kyoto's most famous wooden temples."
-    },
+  {
+    name: "Fushimi Inari Taisha",
+    coords: [34.9671, 135.7727],
+    emoji: "⛩️",
+    description:
+      "Famous for its thousands of red torii gates.",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/0/0f/Fushimi_Inari_Taisha.jpg",
+    link:
+      "https://inari.jp/en/"
+  },
 
-    {
-        name: "Kinkaku-ji Temple",
-        coords: [35.0394, 135.7292],
-        icon: templeIcon,
-        type: "Temple",
-        conan: "Referenced in classic Kyoto travel scenes",
-        description: "The Golden Pavilion covered in gold leaf."
-    },
+  {
+    name: "Kinkaku-ji",
+    coords: [35.0394, 135.7292],
+    emoji: "🏯",
+    description:
+      "The Golden Pavilion, one of Kyoto’s most iconic landmarks.",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/a/ad/Kinkaku-ji.jpg",
+    link:
+      "https://www.shokoku-ji.jp/kinkakuji/"
+  },
 
-    {
-        name: "Ginkaku-ji Temple",
-        coords: [35.0272, 135.7982],
-        icon: templeIcon,
-        type: "Temple",
-        conan: "Traditional eastern Kyoto setting",
-        description: "Known as the Silver Pavilion."
-    },
+  {
+    name: "Ginkaku-ji",
+    coords: [35.0272, 135.7982],
+    emoji: "🏯",
+    description:
+      "Known as the Silver Pavilion and famous for Zen aesthetics.",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/2/21/Ginkakuji.jpg",
+    link:
+      "https://www.shokoku-ji.jp/ginkakuji/"
+  },
 
-    {
-        name: "Ryoan-ji Temple",
-        coords: [35.0345, 135.7182],
-        icon: templeIcon,
-        type: "Temple",
-        conan: "Zen-style Kyoto atmosphere",
-        description: "Famous for its Zen rock garden."
-    },
-
-    {
-        name: "Ninna-ji Temple",
-        coords: [35.0310, 135.7138],
-        icon: templeIcon,
-        type: "Temple",
-        conan: "Historic temple district scenes",
-        description: "Head temple of the Omuro school."
-    },
-
-    {
-        name: "Tenryu-ji Temple",
-        coords: [35.0159, 135.6736],
-        icon: templeIcon,
-        type: "Temple",
-        conan: "Arashiyama-inspired background",
-        description: "Major Zen temple in Arashiyama."
-    },
-
-    {
-        name: "Saiho-ji Temple (Kokedera)",
-        coords: [34.9964, 135.6668],
-        icon: templeIcon,
-        type: "Temple",
-        conan: "Quiet Kyoto garden inspiration",
-        description: "Famous for its moss garden."
-    },
-
-    {
-        name: "To-ji Temple",
-        coords: [34.9805, 135.7478],
-        icon: templeIcon,
-        type: "Temple",
-        conan: "Traditional Kyoto skyline scenes",
-        description: "Known for Japan’s tallest pagoda."
-    },
-
-    {
-        name: "Byodo-in Temple",
-        coords: [34.8890, 135.8074],
-        icon: templeIcon,
-        type: "Temple",
-        conan: "Referenced in Uji cultural settings",
-        description: "Historic Phoenix Hall in Uji."
-    },
-
-    {
-        name: "Kozan-ji Temple",
-        coords: [35.0600, 135.6625],
-        icon: templeIcon,
-        type: "Temple",
-        conan: "Mountain temple atmosphere",
-        description: "Hidden temple in northwest Kyoto."
-    },
-
-    {
-        name: "Enryaku-ji Temple",
-        coords: [35.0704, 135.8406],
-        icon: templeIcon,
-        type: "Temple",
-        conan: "Mysterious mountain setting",
-        description: "Historic temple complex on Mt. Hiei."
-    },
-
-    {
-        name: "Kamigamo Shrine",
-        coords: [35.0603, 135.7525],
-        icon: shrineIcon,
-        type: "Shrine",
-        conan: "Traditional shrine festival scenes",
-        description: "One of Kyoto’s oldest Shinto shrines."
-    },
-
-    {
-        name: "Shimogamo Shrine",
-        coords: [35.0390, 135.7721],
-        icon: shrineIcon,
-        type: "Shrine",
-        conan: "Classic Kyoto shrine atmosphere",
-        description: "Ancient shrine surrounded by forest."
-    },
-
-    {
-        name: "Nijo Castle",
-        coords: [35.0142, 135.7482],
-        icon: castleIcon,
-        type: "Castle",
-        conan: "Historical Kyoto political setting",
-        description: "Tokugawa shogunate residence."
-    }
+  {
+    name: "Nijo Castle",
+    coords: [35.0142, 135.7482],
+    emoji: "🏰",
+    description:
+      "Historic castle of the Tokugawa shogunate.",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/3/32/Nijo_Castle.jpg",
+    link:
+      "https://nijo-jocastle.city.kyoto.lg.jp/"
+  }
 
 ];
 
-// =====================================
-// 5. Add Markers
-// =====================================
+// =========================
+// Generate Markers
+// =========================
 
-heritageSites.forEach(function(site) {
+sites.forEach(site => {
 
-    var popupContent = `
-        <div class="popup-title">${site.name}</div>
+  L.marker(site.coords, {
 
-        <div class="popup-subtitle">
-            UNESCO World Heritage Site • ${site.type}
-        </div>
+    icon: createEmojiIcon(site.emoji)
 
-        <div>
-            ${site.description}
-        </div>
+  })
 
-        <br>
+  .addTo(map)
 
-        <div class="popup-conan">
-            Detective Conan Connection:
-            ${site.conan}
-        </div>
-    `;
+  .bindPopup(`
 
-    L.marker(site.coords, {
-        icon: site.icon
-    })
-    .addTo(map)
-    .bindPopup(popupContent);
+    <div class="popup-card">
+
+      <img src="${site.image}">
+
+      <h2>${site.name}</h2>
+
+      <p>${site.description}</p>
+
+      <a href="${site.link}" target="_blank">
+        Official Website
+      </a>
+
+    </div>
+
+  `);
 
 });
